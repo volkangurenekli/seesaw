@@ -10,7 +10,7 @@ const Footer = () => {
           </g>
         </svg>
       </a>
-      <a className="footer-link color--white" href="/oxfam/take-action">
+      <a className="footer-link color--white" href="/takeaction">
         <svg width={21} height={32} viewBox="0 0 21 31">
           <defs>
             <path id="a" d="M0 .044h19.249v25.471H0z" />

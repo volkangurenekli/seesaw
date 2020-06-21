@@ -6,7 +6,7 @@ import MoneyBag3 from "../../components/Svg/MoneyBag3";
 import Male from "../../components/Svg/Male";
 import Female from "../../components/Svg/Female";
 import Container from "../../components/Container";
-
+import TiltPhone from "../../components/TiltPhone";
 export class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -99,6 +99,7 @@ export class Home extends React.Component {
             ></button>
             <button className="hitPoint hitPoint--left hitPoint--male"></button>
           </div>
+          <TiltPhone />
           <div
             style={{
               display: this.state.isShow,

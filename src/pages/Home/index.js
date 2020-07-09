@@ -1,8 +1,10 @@
 import React from "react";
 import AnimationGif from "../../components/Svg/AnimationGif";
-import MoneyBag1 from "../../components/Svg/MoneyBag1";
-import MoneyBag2 from "../../components/Svg/MoneyBag2";
-import MoneyBag3 from "../../components/Svg/MoneyBag3";
+import Broom from "../../components/Svg/Broom";
+import Pot from "../../components/Svg/Pot";
+import Iron from "../../components/Svg/Iron";
+import Pacifier from "../../components/Svg/Pacifier";
+import Bottle from "../../components/Svg/Bottle";
 import Male from "../../components/Svg/Male";
 import Female from "../../components/Svg/Female";
 import Container from "../../components/Container";
@@ -12,7 +14,7 @@ export class Home extends React.Component {
     super(props);
     this.state = {
       degree: 0.0,
-      second: 10.9,
+      second: 5.9,
       isShow: "flex",
       failClassName: "rodal rodal-fade-leave fail",
       secondFailClassName: "rodal-dialog rodal-fade-leave",
@@ -69,25 +71,27 @@ export class Home extends React.Component {
         <div className="game-container">
           <div className="game">
             <div className="game__copy">
-              <h1 className="fs--lg color--yellow">EQUALIZE</h1>
+              <h1 className="fs--lg color--yellow">EŞİTLE!</h1>
               <h3 className="fs--xs color--yellow">
-                Can you keep the kids balanced?
+                KADINLARLA ERKEKLER ARASINDAKİ EŞİTLİĞİ SAĞLAYABİLİR MİSİN?
               </h3>
             </div>
             <div className="game__seesaw seesaw">
               <div className="seesaw__container">
-                <div className="countdown color--purple-dark">
-                  {parseInt(this.state.second)}
-                </div>
+                <div className="countdown color--purple-dark">{parseInt(this.state.second)}</div>
                 <div className="saw" style={styles.rotate}>
                   <div className="gender gender--male">
-                    <MoneyBag1 />
-                    <MoneyBag2 />
+                    <Iron />
+                    <Pot />
                     <Male />
-                    <MoneyBag1 />
-                    <MoneyBag3 />
+                    <Pacifier />
+                    <Bottle />
+                    <Broom />
                   </div>
-                  <Female />
+                  <div className="gender gender--female">
+                    <Female />
+                  </div>
+
                   <span className="saw__color saw__color--white"></span>
                 </div>
                 <div className="triangle"></div>
@@ -120,18 +124,20 @@ export class Home extends React.Component {
               className="rodal-dialog rodal-zoom-"
             >
               <div className="onboarding">
-                <h2 className="color--purple">EQUALIZE!</h2>
+                <h2 className="color--purple">EŞİTLE!</h2>
                 <div className="onboarding__content">
                   <p>
-                    You have <strong>10</strong> seconds to balance the see-saw
-                    and help young girls get access to education.
+                    Kadınların ekonomik ve sosyal olarak eşit konumda olmalarını sağlamaya yardım etmek için
+                    teraziyi dengede tut.
+                    <br />
+                    <strong>5</strong> saniyen var!
                     <br />
                     <br />
-                    Tapping on the highest side of the see-saw brings it down.
+                    Terazinin yüksekteki kısmına tıklayarak, teraziyi dengelemeye çalış.
                     <br />
                     <br />
-                    <strong>Can you do it? </strong>
-                    <em>Ready? Set?</em>
+                    <strong>Hazır mısın?</strong>
+                    <em> O zaman…</em>
                   </p>
                   <AnimationGif
                     style={{
@@ -140,7 +146,7 @@ export class Home extends React.Component {
                   />
                 </div>
                 <button type="button">
-                  <span onClick={() => this.go()}>GO!</span>
+                  <span onClick={() => this.go()}>BAŞLA!</span>
                 </button>
               </div>
             </div>
@@ -154,10 +160,7 @@ export class Home extends React.Component {
             className={this.state.failClassName}
             tabIndex="-1"
           >
-            <div
-              className="rodal-mask"
-              style={{ background: "rgba(0, 0, 0, 0.6)" }}
-            ></div>
+            <div className="rodal-mask" style={{ background: "rgba(0, 0, 0, 0.6)" }}></div>
             <div
               style={{
                 width: "100%",
@@ -168,7 +171,7 @@ export class Home extends React.Component {
               className={this.state.secondFailClassName}
             >
               <div className="fail-container">
-                <h2 className="fs--xxl color--yellow">FAIL!</h2>
+                <h2 className="fs--xxl color--yellow">OLMADI!</h2>
               </div>
             </div>
           </div>

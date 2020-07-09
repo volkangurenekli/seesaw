@@ -488,11 +488,7 @@ p:last-of-type {
   height: 100%;
   padding: 10px 5px 10px 15px;
 }
-.rodal.oxfam-form
-  .oxfam-form__container
-  form.displayErrors
-  .styled-select
-  select:invalid,
+.rodal.oxfam-form .oxfam-form__container form.displayErrors .styled-select select:invalid,
 .rodal.oxfam-form .oxfam-form__container form.displayErrors input:invalid {
   background-color: red;
 }
@@ -516,11 +512,7 @@ p:last-of-type {
   height: 0;
   width: 0;
 }
-.rodal.oxfam-form
-  .oxfam-form__container
-  .checkbox
-  input:checked
-  ~ .checkmark:after {
+.rodal.oxfam-form .oxfam-form__container .checkbox input:checked ~ .checkmark:after {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
@@ -554,20 +546,12 @@ p:last-of-type {
   opacity: 0;
 }
 @media (min-width: 992px) {
-  .rodal.oxfam-form
-    .oxfam-form__container
-    .checkbox:hover
-    input:checked
-    ~ .checkmark:after {
+  .rodal.oxfam-form .oxfam-form__container .checkbox:hover input:checked ~ .checkmark:after {
     opacity: 1;
     -webkit-transform: scale(1);
     transform: scale(1);
   }
-  .rodal.oxfam-form
-    .oxfam-form__container
-    .checkbox:hover
-    input
-    ~ .checkmark:after {
+  .rodal.oxfam-form .oxfam-form__container .checkbox:hover input ~ .checkmark:after {
     -webkit-transform: scale(0.8);
     transform: scale(0.8);
     opacity: 1;
@@ -732,6 +716,13 @@ p:last-of-type {
   display: block;
   margin-top: 6px;
 }
+.footer .oxfam-logo span {
+  display: block;
+  margin-top: 6px;
+  color: white;
+  text-align: center;
+  font-size: 14px;
+}
 .footer .footer-link:hover svg {
   -webkit-transform: translateY(-4px);
   transform: translateY(-4px);
@@ -847,6 +838,7 @@ p:last-of-type {
   background-color: #bece45;
   opacity: 0;
 }
+
 .gender {
   position: absolute;
   bottom: 22px;
@@ -880,16 +872,14 @@ p:last-of-type {
   width: 44px;
   right: 0;
 }
+
 @media (min-width: 992px) {
   .gender--female {
     height: 96px;
     width: 96px;
   }
 }
-.gender--female svg .body {
-  fill: #e70052;
-  stroke: #e60055;
-}
+
 .gender--male {
   height: 44px;
 }
@@ -908,10 +898,7 @@ p:last-of-type {
     width: 96px;
   }
 }
-.gender--male svg.male-svg .body {
-  fill: #0b9cda;
-  stroke: #0b9cda;
-}
+
 .gender--male .moneyBag1 {
   height: 28px;
   width: 20px;
@@ -942,6 +929,7 @@ p:last-of-type {
     width: 33px;
   }
 }
+
 .hitPoint {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -1208,14 +1196,14 @@ p:last-of-type {
 .take-action__end-text {
   max-width: 60%;
   margin: 40px auto 0;
-  text-align: center;
-  font-size: 14px;
+  /* text-align: center; */
+  font-size: 12px;
 }
 @media (min-width: 768px) {
   .take-action__end-text {
     margin: 40px 0 0;
     max-width: 100%;
-    font-size: 16px;
+    font-size: 12px;
   }
 }
 .rodal,

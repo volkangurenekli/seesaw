@@ -17,9 +17,7 @@ export class TakeAction extends Component {
       lastName: "",
       email: "",
       phone: "",
-      emailPermission: false,
-      telephonePermission: false,
-      smsPermission: false,
+      permission: false,
     };
   }
 
@@ -51,12 +49,8 @@ export class TakeAction extends Component {
       $.email +
       "&phone=" +
       $.phone +
-      "&emailpermission=" +
-      $.emailPermission +
-      "&telephonepermission=" +
-      $.telephonePermission +
-      "&smspermission=" +
-      $.smsPermission;
+      "&permission=" +
+      $.permission;
 
     this.closeForm();
     this.setState({
@@ -80,57 +74,78 @@ export class TakeAction extends Component {
     return (
       <Container>
         <div className="take-action">
-          <h1 className="fs--xl color--yellow">WAS IT FAIR?</h1>
-          <div className="take-action__copy take-action__copy--desktop color--white">
-            <p>
-              It’s pretty tough to win at a game that’s been rigged against you,
-              <strong>isn’t it?</strong> Like this game, not all forms of
-              education are fair.
-              <br />
-              <br />
-              While education is proven to be one of the most powerful tools to
-              fight inequality, millions of children –
-              <strong>especially girls</strong> – are denied an education
-              because they can’t afford it.
-              <br />
-              <br />
-              It’s time to invest in free, public and good-quality education for
-              all!
-              <br />
-              <br />
-              Sign the letter to demand rich-country governments and the World
-              Bank make this commitment, and stop supporting profit-driven
-              private education.
-            </p>
-          </div>
-          <div className="take-action__copy take-action__copy--mobile color--white">
-            <p>
-              It’s pretty tough to win at a game that’s been rigged against you,
-              <strong>isn’t it?</strong> Just like this game, lots of girls’
-              access to education is rigged against them.
-              <br />
-              <br />
-              Education, one of the most powerful tools to fight inequality is
-              denied to millions of children because they can’t afford it.
-              <br />
-              <br />
-              Now it’s time to sign this letter to demand rich-country
-              governments and the World Bank make this commitment, and stop
-              supporting profit-driven private education.
-            </p>
-          </div>
-          <button
-            className="cta-button color--purple-dark"
-            onClick={() => this.clickTakeAction()}
+          <h1 className="fs--xl color--yellow">SİZCE BU ADİL MİYDİ?</h1>
+          <div
+            className="take-action__copy "
+            style={{
+              overflow: "scroll",
+              height: "400px",
+            }}
           >
-            <span>TAKE ACTION</span>
-          </button>
-          <p className="take-action__end-text color--white">
-            Read full letter to rich-country governments and the World Bank
-            <a className="color--white" target="new" href="/oxfam/en/letter">
-              here
-            </a>
-          </p>
+            <div className="take-action__copy take-action__copy--desktop color--white">
+              <p>
+                <strong>Sana karşı birçok faktörün olduğu bir oyunda kazanmak oldukça zor değil mi?</strong>
+              </p>
+              <br />
+              <p>
+                Tıpkı bu oyunda olduğu gibi, kadınların istihdama katılmasının ve ekonomik olarak
+                güçlenmesinin önünde birçok engel var.
+              </p>
+              <br />
+              <p>
+                Bu engellerin en başında ise{" "}
+                <strong>adil olarak paylaşılmayan bakım emeği sorumluluğu</strong> geliyor.
+              </p>
+              <br />
+              <p>Sen de kampanyayı imzalayarak, terazinin dengeye gelmesi için destek ol!</p>
+            </div>
+            <div className="take-action__copy take-action__copy--mobile color--white">
+              <p>
+                <strong>Sana karşı birçok faktörün olduğu bir oyunda kazanmak oldukça zor değil mi?</strong>
+              </p>
+              <br />
+              <p>
+                Tıpkı bu oyunda olduğu gibi, kadınların istihdama katılmasının ve ekonomik olarak
+                güçlenmesinin önünde birçok engel var.
+              </p>
+              <br />
+              <p>
+                Bu engellerin en başında ise{" "}
+                <strong>adil olarak paylaşılmayan bakım emeği sorumluluğu</strong> geliyor.
+              </p>
+              <br />
+              <p>Sen de kampanyayı imzalayarak, terazinin dengeye gelmesi için destek ol!</p>
+            </div>
+            <button className="cta-button color--purple-dark" onClick={() => this.clickTakeAction()}>
+              <span>İMZALA!</span>
+            </button>
+            <div className="take-action__end-text color--white">
+              <p>
+                Türkiye’de iş gücüne dahil olamayan 11 milyon kadın, ev içi bakım sorumlulukları sebebiyle
+                iş gücünün dışında yer alıyor. Özellikle dar gelirli mahallelerde uygun ücretli kreşlerin ve
+                diğer bakım hizmetlerinin olmaması, kadınları daha da fazla yoksulluğa mahkum ediyor; bu da
+                kadınların maruz kaldığı cinsiyet eşitsizlikleri ile beraber gelir eşitsizliğinin de kalıcı
+                hale gelmesine neden oluyor.
+              </p>
+              <p>Bu terazinin dengeye gelebilmesi için;</p>
+              <ul>
+                <li>
+                  Refahın tüm kesimler tarafından adil biçimde paylaşılabilmesi için hayatın her alanında
+                  kadınların maruz kaldıkları eşitsizlikler giderilmeli,
+                </li>
+                <li>
+                  Kadınların ekonomiye dahil olabilmesi, üzerlerindeki ağır bakım yükünün azaltılması için
+                  çocuk, yaşlı, engelli bakım hizmetleri toplumun her kesiminde yaygınlaştırılmalı,
+                </li>
+                <li>
+                  Bunun için ise bakım hizmetleri bir sektör olarak önceliklendirilip bu alandaki kamu
+                  hizmetleri ve altyapı yatırımlarına kaynak aktarılmalı,
+                </li>
+                <li>Bakım sektörüne dahil olabilmeleri için kadın kooperatifleri desteklenmelidir.</li>
+              </ul>
+                <p>Terazinin dengeye gelebilmesi için sen de imzala!</p>
+            </div>
+          </div>
           <div
             style={{
               display: this.state.formDisplay,
@@ -154,7 +169,7 @@ export class TakeAction extends Component {
                 <form>
                   <input
                     type="text"
-                    placeholder="First name"
+                    placeholder="Ad"
                     onChange={(e) => {
                       let firstName = e.target.value;
                       this.setState({
@@ -164,7 +179,7 @@ export class TakeAction extends Component {
                   />
                   <input
                     type="text"
-                    placeholder="Last name"
+                    placeholder="Soyad"
                     onChange={(e) => {
                       let lastName = e.target.value;
                       this.setState({
@@ -174,7 +189,7 @@ export class TakeAction extends Component {
                   />
                   <input
                     type="text"
-                    placeholder="Email"
+                    placeholder="E-mail"
                     onChange={(e) => {
                       let email = e.target.value;
                       this.setState({
@@ -184,7 +199,7 @@ export class TakeAction extends Component {
                   />
                   <input
                     type="text"
-                    placeholder="Phone number"
+                    placeholder="Telefon"
                     onChange={(e) => {
                       let phone = e.target.value;
                       this.setState({
@@ -193,58 +208,35 @@ export class TakeAction extends Component {
                     }}
                   />
 
-                  <p className="privacy-text">
-                    We would like to contact you from time to time to keep you
-                    informed of Oxfam's projects, fundraising activities and
-                    appeals. We will not share your data and you can unsubscribe
-                    at any time. We may contact you for up to two years from the
-                    day you give consent. You can change your preferences at any
-                    time -
-                    <a href="https://www.oxfam.org/en/privacy-notice">
-                      Privacy policy
-                    </a>
-                  </p>
+                  {/* <p className="privacy-text">
+                    We would like to contact you from time to time to keep you informed of Oxfam's projects,
+                    fundraising activities and appeals. We will not share your data and you can unsubscribe
+                    at any time. We may contact you for up to two years from the day you give consent. You
+                    can change your preferences at any time -
+                    <a href="https://www.oxfam.org/en/privacy-notice">Privacy policy</a>
+                  </p> */}
                   <label className="checkbox">
                     <input
                       type="checkbox"
                       onChange={(e) => {
-                        let emailPermission = e.target.checked;
+                        let permission = e.target.checked;
                         this.setState({
-                          emailPermission,
+                          permission,
                         });
                       }}
                     />
                     <span className="checkmark" />
-                    May we contact you by email?
+                    <p>
+                      KEDV’in kampanya bilgilendirmelerinden haberdar olmak istiyorum.{" "}
+                      <a target="new" href="https://www.kedv.org.tr/kvkk">
+                        Kişisel Verilerin Korunmasına İlişkin Aydınlatma Metni
+                      </a>
+                      ’ni onaylıyorum.
+                    </p>
                   </label>
-                  <label className="checkbox">
-                    <input
-                      type="checkbox"
-                      onChange={(e) => {
-                        let telephonePermission = e.target.checked;
-                        this.setState({
-                          telephonePermission,
-                        });
-                      }}
-                    />
-                    <span className="checkmark" />
-                    May we contact you by telephone?
-                  </label>
-                  <label className="checkbox">
-                    <input
-                      type="checkbox"
-                      onChange={(e) => {
-                        let smsPermission = e.target.checked;
-                        this.setState({
-                          smsPermission,
-                        });
-                      }}
-                    />
-                    <span className="checkmark" />
-                    May we contact you by SMS?
-                  </label>
+
                   <button onClick={(e) => this.submit(e)}>
-                    <span>Submit</span>
+                    <span>KAYDET</span>
                   </button>
                 </form>
               </div>
@@ -271,10 +263,8 @@ export class TakeAction extends Component {
               className={this.state.thanksSecondaryClassName}
             >
               <div className="success">
-                <h2 className="fs--lg color--purple">Thank you</h2>
-                <p className="text">
-                  Now help us bring equality to education by sharing Equalizr.
-                </p>
+                <h2 className="fs--lg color--purple">TEŞEKKÜRLER</h2>
+                <p className="text">Şimdi sitemizi paylaşarak eğitime eşitlik getirmemize yardımcı olun.</p>
                 <svg width={46} height={42} viewBox="0 0 46 42">
                   <g fill="#000" fillRule="evenodd">
                     <path d="M0 9.962L.35 39.99l41.201 1.047-.518-15.716-4.42-4.117-.413.233.463 15.76-32.123-.7-1.397-22.345 14.706-.313 1.749-2.579-2.546-1.591z" />
@@ -283,10 +273,7 @@ export class TakeAction extends Component {
                 </svg>
                 <p className="share">Share on Facebook</p>
               </div>
-              <span
-                className="rodal-close"
-                onClick={() => this.closeThanks()}
-              />
+              <span className="rodal-close" onClick={() => this.closeThanks()} />
             </div>
           </div>
         </div>

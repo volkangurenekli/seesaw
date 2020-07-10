@@ -1199,6 +1199,27 @@ p:last-of-type {
   /* text-align: center; */
   font-size: 12px;
 }
+
+.take-action__end-text > ul {
+  text-align: left;
+}
+.take-action__end-text > ul > li {
+  margin: 10px 0px;
+}
+.take-action__end-text > p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .take-action__end-text {
+    max-width: 80% !important;
+  }
+
+  .take-action__end-text > p:first-child {
+    text-align: left;
+  }
+}
 @media (min-width: 768px) {
   .take-action__end-text {
     margin: 40px 0 0;

@@ -5,8 +5,8 @@ import Pot from "../../components/Svg/Pot";
 import Iron from "../../components/Svg/Iron";
 import Pacifier from "../../components/Svg/Pacifier";
 import Bottle from "../../components/Svg/Bottle";
-import Male from "../../components/Svg/Male";
-import Female from "../../components/Svg/Female";
+import Pink from "../../components/Svg/Pink";
+import Blue from "../../components/Svg/Blue";
 import Container from "../../components/Container";
 import TiltPhone from "../../components/TiltPhone";
 export class Home extends React.Component {
@@ -45,7 +45,7 @@ export class Home extends React.Component {
   };
 
   click = () => {
-    if (this.state.degree < -5.0) {
+    if (this.state.degree < -4.0) {
       this.setState({ degree: this.state.degree + 1 });
     }
   };
@@ -53,7 +53,7 @@ export class Home extends React.Component {
   go = () => {
     this.setState({ isShow: "none" });
     setTimeout(() => {
-      this.setState({ degree: -20.0 });
+      this.setState({ degree: -10.0 });
     }, 1000);
 
     this.start();
@@ -80,16 +80,16 @@ export class Home extends React.Component {
               <div className="seesaw__container">
                 <div className="countdown color--purple-dark">{parseInt(this.state.second)}</div>
                 <div className="saw" style={styles.rotate}>
-                  <div className="gender gender--male">
+                  <div className="gender gender--pink">
                     <Iron />
                     <Pot />
-                    <Male />
-                    <Pacifier />
-                    <Bottle />
                     <Broom />
+                    <Pink />
+                    <Pacifier style={{ display: this.state.second < 4 ? "" : "none" }} />
+                    <Bottle style={{ display: this.state.second < 3 ? "" : "none" }} />
                   </div>
-                  <div className="gender gender--female">
-                    <Female />
+                  <div className="gender gender--blue">
+                    <Blue />
                   </div>
 
                   <span className="saw__color saw__color--white"></span>

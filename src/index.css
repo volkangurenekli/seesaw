@@ -867,64 +867,64 @@ p:last-of-type {
 .gender svg .mouth--active {
   display: block;
 }
-.gender--female {
+.gender--blue {
   height: 44px;
   width: 44px;
   right: 0;
 }
 
 @media (min-width: 992px) {
-  .gender--female {
+  .gender--blue {
     height: 96px;
     width: 96px;
   }
 }
 
-.gender--male {
+.gender--pink {
   height: 44px;
 }
 @media (min-width: 992px) {
-  .gender--male {
+  .gender--pink {
     height: 96px;
   }
 }
-.gender--male svg.male-svg {
+.gender--pink svg.pink-svg {
   height: 44px;
   width: 44px;
 }
 @media (min-width: 992px) {
-  .gender--male svg.male-svg {
+  .gender--pink svg.pink-svg {
     height: 96px;
     width: 96px;
   }
 }
 
-.gender--male .moneyBag1 {
+.gender--pink .moneyBag1 {
   height: 28px;
   width: 20px;
 }
 @media (min-width: 992px) {
-  .gender--male .moneyBag1 {
+  .gender--pink .moneyBag1 {
     height: 59px;
     width: 44px;
   }
 }
-.gender--male .moneyBag2 {
+.gender--pink .moneyBag2 {
   height: 36px;
   width: 28px;
 }
 @media (min-width: 992px) {
-  .gender--male .moneyBag2 {
+  .gender--pink .moneyBag2 {
     height: 78px;
     width: 59px;
   }
 }
-.gender--male .moneyBag3 {
+.gender--pink .moneyBag3 {
   height: 21px;
   width: 16px;
 }
 @media (min-width: 992px) {
-  .gender--male .moneyBag3 {
+  .gender--pink .moneyBag3 {
     height: 44px;
     width: 33px;
   }

@@ -2,7 +2,7 @@ import React from "react";
 
 const SVGComponent = (props) => (
   <svg
-    className="male-svg"
+    className="pink-svg"
     viewBox="0 0 95.8 95.8"
     width="1em"
     height="1em"
@@ -10,7 +10,6 @@ const SVGComponent = (props) => (
     stroke="#e60055"
     {...props}
   >
-    <title>{"male-icon"}</title>
     <path className="body" d="M88,48.21a40,40,0,1,1-40-40,40,40,0,0,1,40,40Z" />
     <path
       className="eyes"

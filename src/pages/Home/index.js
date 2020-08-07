@@ -37,7 +37,7 @@ export class Home extends React.Component {
         });
 
         setTimeout(() => {
-          this.props.history.push("/takeaction");
+          this.props.history.push("/imzala");
         }, 1000);
       }
       this.setState({ second: this.state.second - 0.2 });
@@ -72,9 +72,7 @@ export class Home extends React.Component {
           <div className="game">
             <div className="game__copy">
               <h1 className="fs--lg color--yellow">EŞİTLE!</h1>
-              <h3 className="fs--xs color--yellow">
-                KADINLARLA ERKEKLER ARASINDAKİ EŞİTLİĞİ SAĞLAYABİLİR MİSİN?
-              </h3>
+              <h3 className="fs--xs color--yellow">KADINLARLA ERKEKLER ARASINDAKİ EŞİTLİĞİ SAĞLAYABİLİR MİSİN?</h3>
             </div>
             <div className="game__seesaw seesaw">
               <div className="seesaw__container">
@@ -97,10 +95,7 @@ export class Home extends React.Component {
                 <div className="triangle"></div>
               </div>
             </div>
-            <button
-              className="hitPoint hitPoint--right hitPoint--female"
-              onClick={() => this.click()}
-            ></button>
+            <button className="hitPoint hitPoint--right hitPoint--female" onClick={() => this.click()}></button>
             <button className="hitPoint hitPoint--left hitPoint--male"></button>
           </div>
           <TiltPhone />
@@ -127,8 +122,7 @@ export class Home extends React.Component {
                 <h2 className="color--purple">EŞİTLE!</h2>
                 <div className="onboarding__content">
                   <p>
-                    Kadınların ekonomik ve sosyal olarak eşit konumda olmalarını sağlamaya yardım etmek için
-                    teraziyi dengede tut.
+                    Kadınların ekonomik ve sosyal olarak eşit konumda olmalarını sağlamaya yardım etmek için teraziyi dengede tut.
                     <br />
                     <strong>5</strong> saniyen var!
                     <br />

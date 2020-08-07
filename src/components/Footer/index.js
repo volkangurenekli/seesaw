@@ -8,7 +8,7 @@ const Footer = () => {
         <Footer1 />
         <span>KEDV</span>
       </a>
-      <a className="footer-link color--white" href="/takeaction">
+      <a className="footer-link color--white" href="/imzala">
         <Footer2 />
         <span>İMZALA</span>
       </a>
